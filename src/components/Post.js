@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-import Cancel from "../cancel.png";
-import Editimg from '../edit.png';
+import Cancel from '../assets/cancel.png'
+import Editimg from '../assets/edit.png';
 import Markdown from 'react-markdown';
 
 export default function Post({ title, blog, data, setdata, date, time,id }) {

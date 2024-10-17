@@ -12,28 +12,28 @@ import OpenPost from './components/OpenPost';
 function App() {
 
     const initialPosts = [
-      { id:'123',title: 'Title_three', blog: 'This is the blog three', date: 'Sept 4 2024', time: '13:10' },
-      { id:'124',title: 'Title_two', blog: 'This is blog two', date: 'Sept 3 2024', time: '13:11' },
+      { id:'123',title: 'Title_three', blog: 'This is the note three Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti odio ut dolore maxime ipsum quia. Placeat quos neque, impedit praesentium, esse exercitationem asperiores quibusdam quia cum velit magni vero reprehenderit, aspernatur facere accusantium odit veritatis soluta necessitatibus laborum possimus inventore molestias minus. Quo libero voluptates nam ex rem, officiis ipsam.', date: 'Sept 4 2024', time: '13:10' },
+      { id:'124',title: 'Title_two', blog: 'This is note two Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque suscipit soluta, tempore fugit aspernatur mollitia distinctio maiores odio hic voluptates asperiores reprehenderit odit ipsam? Fuga, architecto amet? Suscipit cumque a incidunt nemo aut velit voluptatem vero, itaque aperiam quae ut dolores asperiores vel necessitatibus, quaerat voluptate non quod molestias aliquam?', date: 'Sept 3 2024', time: '13:11' },
       { id:'125',title: 'Title_one', blog: 'loemEssay topiAn essay is nothing but a piece of content which is written from the perception of writer or author. Essays are similar to a story, pamphlet, thesis, etc. The best thing about Essay is you can use any type of language – formal or informal. It can biography, the autobiography of anyone. Following is a great list of 100 essay topics. We will be adding 400 more soon!', date: 'Sept 6 2024', time: '13:15' }
     ];
   
     const [postsData, setPostsData] = useState(initialPosts);
     const [addBlog, setAddBlog] = useState(false);
   
-    useEffect(() => {
-      const storedPosts = localStorage.getItem('postDatalist');
-      if (storedPosts) {
-        try {
-          setPostsData(JSON.parse(storedPosts));
-        } catch (e) {
-          console.error('Failed to parse posts data from localStorage', e);
-        }
-      }
-    }, []);
+    // useEffect(() => {
+    //   const storedPosts = localStorage.getItem('postDatalist');
+    //   if (storedPosts) {
+    //     try {
+    //       setPostsData(JSON.parse(storedPosts));
+    //     } catch (e) {
+    //       console.error('Failed to parse posts data from localStorage', e);
+    //     }
+    //   }
+    // }, []);
   
-    useEffect(() => {
-      localStorage.setItem('postDatalist', JSON.stringify(postsData));
-    }, [postsData]);
+    // useEffect(() => {
+    //   localStorage.setItem('postDatalist', JSON.stringify(postsData));
+    // }, [postsData]);
 
   return (
     <Router>

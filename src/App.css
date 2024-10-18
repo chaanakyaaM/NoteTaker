@@ -7,32 +7,49 @@
 }
 
 :root {
+  /* #2a55ff */
   --primary-color: #2a55ff;
   --white-color: #ffffff;
 }
+
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
 
 .logo {
   color: var(--white-color);
   font-size: 30px;
   font-weight: 500;
+  padding-left: 20px;
 }
 .navbar {
-  width: 98%;
+  width: 100%;
   background: var(--primary-color);
   height: 50px;
   position: fixed;
+  padding: 5px 0px;
   top: 0%;
-  padding: 5px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 99;
+}
+.search{
+  width: 300px;
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 17px;
+  outline: none;
+  border: 2px solid var(--primary-color);
 }
 .links {
   width: auto;
   display: flex;
   align-items: center;
   gap: 10px;
+  padding-right: 20px;
 }
 a {
   text-decoration: none !important;
@@ -59,6 +76,8 @@ a {
 .edit-buttons {
   padding: 5px 10px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
 }
 .edit-buttons button {
@@ -156,6 +175,8 @@ a {
   padding: 5px 10px;
   overflow: hidden;
   position: relative;
+  border-radius: 5px;
+  background-color: white;
 }
 .post .date,
 .post .time {
@@ -213,7 +234,7 @@ a {
 .addblog button,
 .submit,
 .cancel {
-  width: 100%;
+  width: 50%;
   padding: 10px 20px;
   border: none;
   font-size: 18px;
@@ -222,6 +243,7 @@ a {
   cursor: pointer;
   transition-duration: 1s;
 }
+
 .about {
   margin: 50px;
   margin-top: 80px;

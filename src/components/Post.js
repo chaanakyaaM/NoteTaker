@@ -16,8 +16,8 @@ export default function Post({ title, blog, data, setdata, date, time,id }) {
     setBlogVal(blog);
   }, [title, blog]);
 
-  function clickHandler() {
-    const filteredData = data.filter(item => item.time !== time);
+  function delclickHandler() {
+    const filteredData = data.filter(item => item.id !== id);
     setdata(filteredData);
   }
 
@@ -60,7 +60,7 @@ export default function Post({ title, blog, data, setdata, date, time,id }) {
           <Markdown className='md'>{blogVal}</Markdown>
           <button className='readmore' onClick={handleReadMore}>Read More</button>
           <div className="delandedit">
-            <button className="del" onClick={clickHandler}>
+            <button className="del" onClick={delclickHandler}>
               <img src={Cancel} alt="Cancel" />
             </button>
             <button className="edit" onClick={() => setEdit(true)}>

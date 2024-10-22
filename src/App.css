@@ -44,6 +44,10 @@
   outline: none;
   border: 2px solid var(--primary-color);
 }
+.btn-section{
+  width: 100%;
+  display: flex;
+}
 .links {
   width: auto;
   display: flex;

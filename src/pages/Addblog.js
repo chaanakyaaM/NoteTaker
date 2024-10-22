@@ -31,6 +31,10 @@ export default function Addblog({ update, posts, add, setadd }) {
     setadd(!add);
     toast.success('Blog successfully created.')
   }
+  function clear(){
+    setTextvalue('')
+    
+  }
   
   return (
     <>
@@ -57,7 +61,10 @@ export default function Addblog({ update, posts, add, setadd }) {
         <Markdown className='markdown-preview'>{textvalue}</Markdown>
         </div>
       </div>
+      <div className='btn-section'>
       <button onClick={submit}>Create</button>
+      <button onClick={clear}>Clear</button>
+      </div>
     </div>
     </>
   );

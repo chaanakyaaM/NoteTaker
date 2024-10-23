@@ -42,21 +42,17 @@ export default function Addblog({ update, posts, add, setadd }) {
   useEffect(() => {
     buttonRef.current.focus(); // Focus the button when the component mounts
   }, []);
-  function choicehandler(param){
-    if (param==='Md'){
-      setchoice(true)
-    }
-    else{
-      setchoice(false)
-    }
+  
+  function choicehandler(selectedChoice){
+    setchoice(selectedChoice === 'Md');
   }
   
   return (
     <>
     <div className="addblog">
       <div className="selector">
-        <button className="choice choice1" ref={buttonRef} onClick={(e)=>choicehandler(e.target.textContent)}>Md</button>
-        <button className="choice choice2" onClick={(e)=>choicehandler(e.target.textContent)}>Text</button>
+        <button className ={ `choice choice1 ${choice ? 'activeclass' : ''}`} ref={buttonRef} onClick={(e)=>choicehandler(e.target.textContent)}>Md</button>
+        <button className={ `choice choice2 ${choice ?  '' : 'activeclass' }`} onClick={(e)=>choicehandler(e.target.textContent)}>Text</button>
       </div>
       <input
         type="text"

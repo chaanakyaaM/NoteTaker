@@ -7,6 +7,7 @@ import Addblog from './pages/Addblog';
 import { useState, useEffect } from 'react';
 import About from './pages/About';
 import OpenPost from './components/OpenPost';
+import SearchList from './components/SearchList';
 
 
 function App() {
@@ -64,6 +65,10 @@ function App() {
           <Route 
             path="/post/:id" 
             element={<OpenPost data={postsData}></OpenPost>}
+          />
+          <Route 
+            path="/search" 
+            element={<SearchList data={postsData}></SearchList>}
           />
         </Routes>
       </div>

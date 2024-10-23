@@ -8,10 +8,6 @@ const OpenPost = ({ data }) => {
   const navigate = useNavigate();
   const post = data.find(item => item.id === id);
 
-  if (!post) {
-    return <p>Post not found</p>;
-  }
-
   function backclickhandler(){
     navigate(-1)
   }

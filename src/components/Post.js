@@ -29,8 +29,7 @@ export default function Post({ title, blog, data, setdata, date, time,id ,choice
     setEdit(false); 
   }
 
-  const handleReadMore = (  ) => {
-
+  const handleReadMore = () => {
     navigate(`/post/${encodeURIComponent(id)}`);
   };
 
@@ -73,3 +72,4 @@ export default function Post({ title, blog, data, setdata, date, time,id ,choice
   );
 }
 
+// export {editHandler,handleReadMore};/

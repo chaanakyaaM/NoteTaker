@@ -5,7 +5,7 @@ import Cancel from '../assets/cancel.png'
 import Editimg from '../assets/edit.png';
 import Markdown from 'react-markdown';
 
-export default function Post({ title, blog, data, setdata, date, time,id }) {
+export default function Post({ title, blog, data, setdata, date, time,id ,choice }) {
   const [edit, setEdit] = useState(false);
   const [val, setVal] = useState(title);
   const [blogVal, setBlogVal] = useState(blog);
@@ -57,7 +57,7 @@ export default function Post({ title, blog, data, setdata, date, time,id }) {
           <h2 className="title">{val}</h2>
           <p className="date">{date}</p>
           <p className="time">{time}</p>
-          <Markdown className='md'>{blogVal}</Markdown>
+          {choice? <Markdown className='md'>{blogVal}</Markdown> : <pre className="md">{blogVal}</pre>}      
           <button className='readmore' onClick={handleReadMore}>Read More</button>
           <div className="delandedit">
             <button className="del" onClick={delclickHandler}>

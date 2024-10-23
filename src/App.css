@@ -17,7 +17,6 @@
   margin: 0%;
 }
 
-
 .logo {
   color: var(--white-color);
   font-size: 30px;
@@ -36,8 +35,9 @@
   justify-content: space-between;
   z-index: 99;
 }
+
 .search{
-  width: 300px;
+  width: 400px;
   padding: 7px 20px;
   border-radius: 50px;
   font-size: 17px;
@@ -47,6 +47,7 @@
 .btn-section{
   width: 100%;
   display: flex;
+  gap: 3px;
 }
 .links {
   width: auto;
@@ -82,7 +83,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  /* gap: 5px; */
 }
 .edit-buttons button {
   width: 600px;
@@ -116,15 +117,21 @@ a {
   overflow: hidden;
 }
 
+
 .addblog {
   left: 60%;
   top: 20%;
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   margin: 50px;
   margin-top: 80px;
   overflow: hidden;
+}
+.addblog input{
+  border: none !important;
+  outline: none !important;
+  /* border-bottom: 2px solid black; */
+
 }
 .editfield {
   width: 100%;
@@ -145,9 +152,12 @@ a {
 .editfield textarea {
   height: auto;
   width: auto;
-  font-size: 15px;
+  font-size: 17px;
   padding: 5px 10px;
   border: 2px solid black;
+}
+.editfield textarea{
+  min-height: 300px;
 }
 
 .editfield input,
@@ -281,14 +291,46 @@ a {
   height: 100%;
   overflow: auto;
 }
-.newp {
+.open-post {
   height: fit-content;
   margin: 20px;
   margin-top: 80px;
+}
+.back{
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 7px 40px;
+  font-size: 17px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: sticky;
+  top: 70px;
+  right: 0px;
 }
 .content {
   width: 80%;
   margin: auto;
   padding: 10px;
   border: 3px solid var(--primary-color);
+}
+.selector{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+}
+.selector > .choice{
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  transition-duration: 0.2s;
+}
+.choice:focus{
+  background-color: var(--primary-color);
+  color: white;
 }

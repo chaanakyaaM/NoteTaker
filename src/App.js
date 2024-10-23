@@ -12,7 +12,7 @@ import OpenPost from './components/OpenPost';
 function App() {
 
     const initialPosts = [
-      { id:'125',title: 'Title_one', blog: 'loemEssay topiAn essay is nothing but a piece of content which is written from the perception of writer or author. Essays are similar to a story, pamphlet, thesis, etc. The best thing about Essay is you can use any type of language – formal or informal. It can biography, the autobiography of anyone. Following is a great list of 100 essay topics. We will be adding 400 more soon!', date: 'Sept 6 2024', time: '13:15' }
+      { id:'125',title: 'Title_one', blog: 'loemEssay topiAn essay is nothing but a piece of content which is written from the perception of writer or author. Essays are similar to a story, pamphlet, thesis, etc. The best thing about Essay is you can use any type of language – formal or informal. It can biography, the autobiography of anyone. Following is a great list of 100 essay topics. We will be adding 400 more soon!', date: 'Sept 6 2024', time: '13:15' ,choice: true }
     ];
 
     const [postsData, setPostsData] = useState(() => {
@@ -47,6 +47,7 @@ function App() {
                     data={postsData} 
                     setdata={setPostsData} 
                     id={item.id}
+                    choice={item.choice}
                   />
                 ))}
               </Postlist>

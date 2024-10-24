@@ -68,7 +68,7 @@ function App() {
           />
           <Route 
             path="/search" 
-            element={<SearchList data={postsData}></SearchList>}
+            element={<SearchList data={postsData} setdata={setPostsData} ></SearchList>}
           />
         </Routes>
       </div>

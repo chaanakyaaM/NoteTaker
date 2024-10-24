@@ -72,4 +72,3 @@ export default function Post({ title, blog, data, setdata, date, time,id ,choice
   );
 }
 
-// export {editHandler,handleReadMore};/

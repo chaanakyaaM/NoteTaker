@@ -1,4 +1,4 @@
-import React, { useState,useRef,useEffect } from "react";
+import React, { useState } from "react";
 import { toast } from 'react-toastify';
 import Markdown from "react-markdown";
 import { v4 as uuidv4 } from 'uuid';
@@ -37,11 +37,6 @@ export default function Addblog({ update, posts, add, setadd }) {
     setTextvalue('')
     
   }
-  const buttonRef = useRef(null);
-
-  useEffect(() => {
-    buttonRef.current.focus(); // Focus the button when the component mounts
-  }, []);
   
   function choicehandler(selectedChoice){
     setchoice(selectedChoice === 'Md');
@@ -51,7 +46,7 @@ export default function Addblog({ update, posts, add, setadd }) {
     <>
     <div className="addblog">
       <div className="selector">
-        <button className ={ `choice choice1 ${choice ? 'activeclass' : ''}`} ref={buttonRef} onClick={(e)=>choicehandler(e.target.textContent)}>Md</button>
+        <button className ={ `choice choice1 ${choice ? 'activeclass' : ''}`} onClick={(e)=>choicehandler(e.target.textContent)}>Md</button>
         <button className={ `choice choice2 ${choice ?  '' : 'activeclass' }`} onClick={(e)=>choicehandler(e.target.textContent)}>Text</button>
       </div>
       <input

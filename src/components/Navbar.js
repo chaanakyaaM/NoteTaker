@@ -9,9 +9,12 @@ export default function Navbar({ logo, add, setadd, len }) {
   }
   const [searchval, setsearchval] = useState('')
   const searchHandler = () => {
-  if(searchval.length>5){
-    navigate(`/search?query=${encodeURIComponent(searchval)}`)
-  }
+    if(searchval.length>1){
+      navigate(`/search?query=${encodeURIComponent(searchval)}`);
+    }
+    else if (searchval.length===0){
+      navigate('/');
+    }
 }
 
   return (
@@ -22,7 +25,7 @@ export default function Navbar({ logo, add, setadd, len }) {
       <div className="searchfield">
 
       <input type="text" className='search' placeholder='Search' onChange={(e)=>setsearchval(e.target.value)} value={searchval} onKeyDown={(e) => e.key === 'Enter' && searchHandler()} />
-      <button className="search-btn">
+      <button className="search-btn" onClick={searchHandler}>
 
       <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-512.png" alt="" className="search-img" />
       </button>

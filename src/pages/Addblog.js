@@ -12,7 +12,7 @@ export default function Addblog({ update, posts, add, setadd }) {
 
   function submit() {
     if ((value === "") | (textvalue === "")) {
-      toast.error("You have to fill both title and blog fields");
+      toast.error("You have to fill both fields");
       return;
     }
     const now = new Date();
@@ -31,22 +31,22 @@ export default function Addblog({ update, posts, add, setadd }) {
     setvalue("");
     setTextvalue("");
     setadd(!add);
-    toast.success('Blog successfully created.')
+    toast.success('Note successfully created.')
   }
   function clear(){
     setTextvalue('')
     
   }
-  
+
   function choicehandler(selectedChoice){
-    setchoice(selectedChoice === 'Md');
+    setchoice(selectedChoice === 'Markdown');
   }
   
   return (
     <>
     <div className="addblog">
       <div className="selector">
-        <button className ={ `choice choice1 ${choice ? 'activeclass' : ''}`} onClick={(e)=>choicehandler(e.target.textContent)}>Md</button>
+        <button className ={ `choice choice1 ${choice ? 'activeclass' : ''}`} onClick={(e)=>choicehandler(e.target.textContent)}>Markdown</button>
         <button className={ `choice choice2 ${choice ?  '' : 'activeclass' }`} onClick={(e)=>choicehandler(e.target.textContent)}>Text</button>
       </div>
       <input
@@ -62,7 +62,7 @@ export default function Addblog({ update, posts, add, setadd }) {
         className="textfield"
         onChange={(e) => setTextvalue(e.target.value)}
         value={textvalue}
-        placeholder="Enter your blog"
+        placeholder="Enter your Note"
       />
       <div className="preview">
         {!textvalue && <p className="heading">Preview</p>}

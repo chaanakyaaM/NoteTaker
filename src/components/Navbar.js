@@ -14,9 +14,9 @@ export default function Navbar({ logo, add, setadd, len }) {
     }
     else if (searchval.length===0){
       navigate('/');
-    }
-}
-
+  }
+ }
+ 
   return (
     <div className="navbar">
       <NavLink to="/">
@@ -36,13 +36,13 @@ export default function Navbar({ logo, add, setadd, len }) {
         </NavLink>
         <NavLink to="/add">
           <button className="buttons" onClick={clickHandler}>
-            Create Blog
+            Create Note
           </button>
         </NavLink>
         {/* <NavLink to="/about">
-          <button className="buttons">About</button>
+         <button className="buttons">About</button>
         </NavLink> */}
-        <div className="len">Total Posts: {len}</div>
+        <div className="len">Total Notes: {len}</div>
       </div>
     </div>
   );

@@ -39,9 +39,6 @@ export default function Navbar({ logo, add, setadd, len }) {
             Create Note
           </button>
         </NavLink>
-        {/* <NavLink to="/about">
-         <button className="buttons">About</button>
-        </NavLink> */}
         <div className="len">Total Notes: {len}</div>
       </div>
     </div>

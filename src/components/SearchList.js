@@ -1,6 +1,5 @@
 import Post from './Post';
 import React from 'react'
-import Postlist from './Postlist';
 import { useLocation } from 'react-router-dom';
 
 function SearchList({data,setdata}) {
@@ -15,25 +14,25 @@ function SearchList({data,setdata}) {
     // alert(JSON.stringify(filteredData))
 
     return (
-      <Postlist>
+      <div className="postlist">
         {filteredData.length > 0 ? (
           filteredData.map(post => (
             <Post 
-              key={post.id} 
-              title={post.title} 
-              blog={post.blog} 
-              data={data} 
-              setdata={setdata} 
-              date={post.date} 
-              time={post.time} 
-              id={post.id} 
-              choice
+            key={post.id} 
+            title={post.title} 
+            blog={post.blog} 
+            data={data} 
+            setdata={setdata} 
+            date={post.date} 
+            time={post.time} 
+            id={post.id} 
+            choice
             />
           ))
         ) : (
           <p>No results found.</p>
         )}
-      </Postlist>
+        </div>
     );
 }
 

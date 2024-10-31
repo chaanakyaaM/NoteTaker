@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home'; // Import the new Home component
 import Addblog from './pages/Addblog';
-import About from './pages/About';
 import OpenPost from './components/OpenPost';
 import SearchList from './components/SearchList';
 
@@ -29,18 +28,15 @@ function App() {
 
     return (
         <Router>
-              <>
             <div className="App">
                 <Navbar logo='NoteTaker' add={addBlog} setadd={setAddBlog} len={postsData.length} />
                 <Routes>
                     <Route path="/" element={<Home />} /> {/* Use Home component for '/' */}
                     <Route path="/add" element={<Addblog update={setPostsData} posts={postsData} add={addBlog} setadd={setAddBlog} />} />
-                    <Route path="/about" element={<About />} />
                     <Route exact path="/post/:id" element={<OpenPost data={postsData} />} />
                     <Route path="/search" element={<SearchList data={postsData} setdata={setPostsData} />} />
                 </Routes>
             </div>
-              </>
         </Router>
     );
 }

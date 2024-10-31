@@ -19,6 +19,8 @@ export default function Navbar({ logo, add, setadd, len }) {
  
   return (
     <div className="navbar">
+      <div className="testing">
+        
       <NavLink to="/">
         <div className="logo">{logo}</div>
       </NavLink>
@@ -29,6 +31,7 @@ export default function Navbar({ logo, add, setadd, len }) {
 
       <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-512.png" alt="" className="search-img" />
       </button>
+      </div>
       </div>
       <div className="links">
         <NavLink to="/">

@@ -24,9 +24,6 @@
   height: 100vh;
 }
 
-.addblog > *{
-}
-
 .logo {
   color: var(--white-color);
   font-size: 1.2em;
@@ -108,12 +105,12 @@ a {
   justify-content: center;
   /* gap: 5px; */
 }
-.edit-buttons button {
+/* .edit-buttons button {
   width: 600px;
   background-color: var(--primary-color);
   border: 2px solid var(--white-color);
   color: var(--white-color);
-}
+} */
 
 .links .active button {
   color: var(--primary-color);
@@ -279,7 +276,7 @@ a {
 .addblog button,
 .submit,
 .cancel {
-  width: 50%;
+  width: 100%;
   padding: 10px 20px;
   border: none;
   font-size: 18px;
@@ -287,18 +284,15 @@ a {
   color: var(--white-color);
   cursor: pointer;
   transition-duration: 1s;
+  box-sizing: border-box;
 }
-
-.about {
-  margin: 50px;
-  margin-top: 80px;
+.edit-buttons{
+  width: 100%;
+  display: flex;
+  gap: 10px;
 }
-.about h1 {
-  color: var(--primary-color);
-  font-size: 50px;
-}
-.about p {
-  font-size: 20px;
+.submit,.cancel{
+  width: 100%;
 }
 .blogarea {
   white-space: pre-wrap;
@@ -308,8 +302,8 @@ a {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  /* flex-wrap: wrap; */
 }
+
 .preview {
   width: 50%;
   border: 2px solid black;
@@ -331,22 +325,6 @@ a {
   /* margin: 20px; */
   margin-top: 110px;
 }
-/* .back{
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  outline: none;
-  padding: 7px 40px;
-  font-size: 17px;
-  border-radius: 50px;
-  cursor: pointer;
-  position: sticky;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 65px;
-  left: 0;
-} */
 .back {
   background-color: var(--primary-color);
   color: white;
@@ -360,8 +338,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 65px; /* Distance from the top when scrolling */
-  left: 0px; /* Position it to the left */
+  top: 65px; 
+  left: 0px; 
 }
 .content {
   width: 80%;
@@ -420,6 +398,28 @@ a {
   overflow: hidden;
 }
 
+.testing {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  max-width: 800px;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+@media (max-width: 1250px) {
+  .testing {
+    max-width: 650px;
+  }
+}
+@media (max-width: 1110px) {
+  .testing {
+    gap: 20px;
+    max-width: 500px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     height: auto;
@@ -430,7 +430,6 @@ a {
 
   .searchfield {
     width: 100%;
-    margin-top: 5px;
   }
 
   .search {
@@ -441,8 +440,19 @@ a {
     width: 100%;
     flex-direction: row;
     align-items: flex-start;
-
     gap: 5px;
+  }
+  .md-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .textfield{
+    width: 100%;
+    height: 250px;
+  }
+  .preview{
+    width: 100%;
+    height: 250px;
   }
 
 
@@ -457,10 +467,10 @@ a {
 }
 
 .postlist{
-  margin-top: 170px;
+  margin-top: 180px;
 }
 .open-post{
-  margin-top: 210px;
+  margin-top: 200px;
 }
 
   .search-img {
@@ -492,7 +502,6 @@ a {
 
 }
 
-
 @media (max-width: 983px) {
   .navbar {
     flex-direction: column;
@@ -515,7 +524,7 @@ a {
     top: 155px;
   }
   .postlist{
-    margin-top: 180px;
+    margin-top: 170px;
   }
   .links {
     width: 100%;
@@ -523,5 +532,18 @@ a {
     align-items: center;
     gap: 5px;
     justify-content: flex-start;
+  }
+  .addblog{
+    margin-top: 160px;
+  }
+  .selector{
+    margin-top: 45px;
+  }
+  .testing{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
   }
 }
